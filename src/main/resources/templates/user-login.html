@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Secure Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/lstyle.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+
+<!-- Login Box -->
+<div class="wrapper">
+    <div class="login-container">
+        <h2>ACCESS TERMINAL</h2>
+
+        <form action="/user/login" method="post">
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <button type="submit" class="login-btn">LOGIN</button>
+        </form>
+
+        <p class="info-text">Enter email to initiate secure session.</p>
+        <p class="error-message" th:text="${error}"></p>
+    </div>
+</div>
+
+<script src="/js/lscript.js"></script>
+</body>
+</html>
